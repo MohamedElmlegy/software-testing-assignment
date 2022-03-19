@@ -72,10 +72,10 @@ public class arithmetic_operation {
 	} 
 	public double segma_ci_pwr_p (int i , int n ,int  c ,  int p) {
 		double result = 0 ;
-		for ( int j = i  ; j <= n ; i++ ) {
+		while( i <= n ) {
 			
 			result = result + Math.pow(i, p)  ;
-			
+			i++ ; 
 		}
 		return result * c;
 	} 
