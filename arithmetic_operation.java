@@ -57,6 +57,10 @@ public class arithmetic_operation {
 	public long factorial (long a) {
 		long result = 1 ;
 		long previous_result = 1;
+		if(a<0){
+			System.out.println("There is no Factorial for negative numbers");
+			return -1 ;
+		}
 		while (a>0) {
 			previous_result = result;
 			result = (result * a) ;
@@ -68,7 +72,7 @@ public class arithmetic_operation {
 			}
 		}
 		return result;
-	} 
+	}
 	public double sigma_cx_pwr_p (int i , int n ,int c , int [] x , int p) {
 		double result = 0 ;
 		for ( int j = i  ; j <= n ; j++ ) {
