@@ -106,7 +106,7 @@ public class arithmetic_operation {
 			alert.showAndWait();  
 			return 0;
 		}
-		else if (n>x.length || i < x.length){
+		else if (n>x.length){
 			Alert alert = new Alert(AlertType.ERROR);
 			alert.setTitle("Error Dialog");
 			alert.setHeaderText(null);
