@@ -28,8 +28,11 @@ public class arithmetic_operation {
 			return a /b ;
 		}
 		else {
-			System.out.println("the denominator cannot be zero") ;
-			System.out.println("ignor the result shown and try again!") ;
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Error Dialog");
+			alert.setHeaderText(null);
+			alert.setContentText("the denominator cannot be zero!\nignor the result shown and try again!. ");
+			alert.showAndWait();  
 			
 			return 0 ;
 		}
@@ -44,8 +47,11 @@ public class arithmetic_operation {
 			previous_result = result ;
 			result = (long) (result * a) ;
 			if (result < previous_result ) {
-				System.out.println("the result is too big! ");
-				System.out.println("cannot solve ");
+				Alert alert = new Alert(AlertType.ERROR);
+				alert.setTitle("Error Dialog");
+				alert.setHeaderText(null);
+				alert.setContentText("the result is too big!\ncannot solve. ");
+				alert.showAndWait();  
 				return 0;
 			}
 		}
@@ -58,7 +64,11 @@ public class arithmetic_operation {
 		long result = 1 ;
 		long previous_result = 1;
 		if(a<0){
-			System.out.println("There is no Factorial for negative numbers");
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Error Dialog");
+			alert.setHeaderText(null);
+			alert.setContentText("There is no Factorial for negative numbers!");
+			alert.showAndWait();  
 			return -1 ;
 		}
 		while (a>0) {
@@ -66,8 +76,11 @@ public class arithmetic_operation {
 			result = (result * a) ;
 			a-- ;
 			if (result < previous_result) {
-				System.out.println("the result is too big! ");
-				System.out.print("cannot solve ");
+				Alert alert = new Alert(AlertType.ERROR);
+				alert.setTitle("Error Dialog");
+				alert.setHeaderText(null);
+				alert.setContentText("the result is too big!\ncannot solve. ");
+				alert.showAndWait();  
 				return 0;
 			}
 		}
@@ -75,19 +88,64 @@ public class arithmetic_operation {
 	}
 	public double sigma_cx_pwr_p (int i , int n ,int c , int [] x , int p) {
 		double result = 0 ;
-		for ( int j = i  ; j <= n ; j++ ) {
-			
-			result = result + Math.pow( x[j] , p )  ;
+		if(i<0){
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Error Dialog");
+			alert.setHeaderText(null);
+			alert.setContentText("the start index cannot be negative!\ncannot solve. ");
+			alert.showAndWait();  
+			return 0;
 		}
-		return result* c;
+		else if (n<i){
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Error Dialog");
+			alert.setHeaderText(null);
+			alert.setContentText("the end index cannot be less than the starting index!\ncannot solve. ");
+			alert.showAndWait();  
+			return 0;
+		}
+		else if (n>x.length || i < x.length){
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Error Dialog");
+			alert.setHeaderText(null);
+			alert.setContentText("the indexes given cannot be used on the data as there is overflow!\ncannot solve. ");
+			alert.showAndWait();  
+			return 0;
+		}
+		else {
+			for ( int j = i  ; j <= n ; j++ ) {
+				result = result + Math.pow( x[j] , p )  ;
+			}
+			return result* c;
+		}
+		
 	} 
 	public double sigma_ci_pwr_p (int i , int n ,int  c ,  int p) {
 		double result = 0 ;
-		while (  i <= n ) {
-			
-			result = result + Math.pow(i, p)  ;
-			 i++;
+		if(i<0){
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Error Dialog");
+			alert.setHeaderText(null);
+			alert.setContentText("the start index cannot be negative!\ncannot solve. ");
+			alert.showAndWait();  
+			return 0;
 		}
-		return result * c;
+		else if (n<i){
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Error Dialog");
+			alert.setHeaderText(null);
+			alert.setContentText("the end index cannot be less than the starting index!\ncannot solve. ");
+			alert.showAndWait();  
+			return 0;
+		}
+		
+		else {
+			while (  i <= n ) {
+				
+				result = result + Math.pow(i, p)  ;
+				i++;
+			}
+			return result * c;
+		}
 	} 
 }
