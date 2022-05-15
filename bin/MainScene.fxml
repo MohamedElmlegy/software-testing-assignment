@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="453.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainSceneController">
+   <children>
+      <Button fx:id="nextbtn" layoutX="248.0" layoutY="370.0" mnemonicParsing="false" onAction="#btnnextclicked" prefHeight="26.0" prefWidth="102.0" text="next" />
+      <Button fx:id="backbtn" layoutX="107.0" layoutY="370.0" mnemonicParsing="false" onAction="#btnbackclicked" prefHeight="26.0" prefWidth="102.0" text="back" />
+      <TextField fx:id="var1" layoutX="21.0" layoutY="179.0" prefHeight="26.0" prefWidth="74.0" />
+      <TextField fx:id="var2" layoutX="121.0" layoutY="179.0" prefHeight="26.0" prefWidth="74.0" />
+      <ComboBox fx:id="cb" layoutX="20.0" layoutY="87.0" prefHeight="26.0" prefWidth="238.0" promptText="choose type of problem" />
+      <Button fx:id="subbtn" layoutX="275.0" layoutY="302.0" mnemonicParsing="false" onAction="#btnsubmitclicked" prefHeight="26.0" prefWidth="150.0" text="submit" />
+      <Label fx:id="l1" layoutX="21.0" layoutY="148.0" prefHeight="18.0" prefWidth="73.0" text="first operand" />
+      <Label fx:id="l2" layoutX="121.0" layoutY="148.0" prefHeight="18.0" prefWidth="90.0" text="second operand" />
+      <TextField fx:id="var3" layoutX="234.0" layoutY="179.0" prefHeight="26.0" prefWidth="74.0" />
+      <TextField fx:id="var4" layoutX="335.0" layoutY="179.0" prefHeight="26.0" prefWidth="74.0" />
+      <Label fx:id="l3" layoutX="234.0" layoutY="148.0" prefHeight="18.0" prefWidth="73.0" text="first operand" />
+      <Label fx:id="l4" layoutX="335.0" layoutY="148.0" prefHeight="18.0" prefWidth="90.0" text="second operand" />
+      <TextField fx:id="vardata" layoutX="21.0" layoutY="245.0" prefHeight="26.0" prefWidth="402.0" />
+      <Label fx:id="l5" layoutX="21.0" layoutY="214.0" prefHeight="18.0" prefWidth="73.0" text="data x [ ]" />
+      <TextField fx:id="result" editable="false" layoutX="21.0" layoutY="302.0" prefHeight="26.0" prefWidth="204.0" promptText="result" />
+      <Label fx:id="l6" layoutX="21.0" layoutY="14.0" prefHeight="63.0" prefWidth="402.0" text="Label" />
+   </children>
+</AnchorPane>
