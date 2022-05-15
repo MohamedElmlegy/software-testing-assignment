@@ -312,14 +312,6 @@ public class MainSceneController implements Initializable {
               case "division" :
               x = Integer.parseInt(var1.getText());
               y = Integer.parseInt(var2.getText());
-              if(y==0){
-                Alert alert = new Alert(AlertType.ERROR);
-                alert.setTitle("Error Dialog");
-                alert.setHeaderText(null);
-                alert.setContentText("the denominator cannot be zero!\nignor the result shown and try again!. ");
-
-                alert.showAndWait();  
-              }
               result.setText(Double.toString(a.division(x,y)));  
 
               // code block
@@ -328,45 +320,13 @@ public class MainSceneController implements Initializable {
               // code block
               x = Integer.parseInt(var1.getText());
               y = Integer.parseInt(var2.getText());
-              ii = a.bigpower(x,y);
-              if(ii == 0 && x!=0 ){
-                Alert alert = new Alert(AlertType.ERROR);
-                alert.setTitle("Error Dialog");
-                alert.setHeaderText(null);
-                alert.setContentText("the result is too big!\ncannot solve. ");
-
-                alert.showAndWait();  
-              }
-              else{
-               result.setText(Long.toString(a.bigpower(x,y)));  
-
-              }
+              result.setText(Long.toString(a.bigpower(x,y)));  
 
               break;
               case "factorial" :
               // code block
               x = Integer.parseInt(var1.getText());
-              ii = a.factorial(x);
-              if(ii==-1){
-                Alert alert = new Alert(AlertType.ERROR);
-                alert.setTitle("Error Dialog");
-                alert.setHeaderText(null);
-                alert.setContentText("There is no Factorial for negative numbers!");
-
-                alert.showAndWait();  
-              }
-              else if(ii == 0){
-                Alert alert = new Alert(AlertType.ERROR);
-                alert.setTitle("Error Dialog");
-                alert.setHeaderText(null);
-                alert.setContentText("the result is too big!\ncannot solve. ");
-                alert.showAndWait();  
-              }
-              else{
-
-                result.setText(Long.toString(ii));  
-
-              }
+              result.setText(Long.toString(a.factorial(x)));  
 
               break;
             case "log x to the base of y":
