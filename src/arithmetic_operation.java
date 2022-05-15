@@ -12,6 +12,8 @@ import java.util.*;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Alert;
 
 public class arithmetic_operation {
 	public double addition (double a , double b) {
