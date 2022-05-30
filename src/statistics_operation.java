@@ -115,8 +115,10 @@ public class statistics_operation {
         return e ;
     }
     public List<Integer> getQuartiles (int [] array){
-        this.arr = array ;
         List<Integer> e = new ArrayList<Integer>() ;
+        if (array == null || array.length == 0)
+            return e;
+        this.arr = array ;
         Arrays.sort(arr);
         int q2 = arr.length/2 ;
         int q1 = q2 / 2 ;
@@ -128,6 +130,8 @@ public class statistics_operation {
     }
     public List<Integer> getQuartiles (){
         List<Integer> e = new ArrayList<Integer>() ;
+        if (this.arr == null || this.arr.length == 0)
+            return e;
         Arrays.sort(arr);
         int q2 = arr.length/2 ;
         int q1 = q2 / 2 ;
@@ -179,12 +183,16 @@ public class statistics_operation {
         return s ;
     }
     public int getInterquartileRange (int [] array){
+        if (array == null || array.length == 0)
+            return -1;
         this.arr = array ; 
         List<Integer> e = new ArrayList<Integer>() ;
         e = getQuartiles(arr) ;
         return e.get(2)- e.get(0);
     }
     public int getInterquartileRange (){
+        if (this.arr == null || this.arr.length == 0)
+            return -1;
         List<Integer> e = new ArrayList<Integer>() ;
         e = getQuartiles(arr) ;
         return e.get(2)- e.get(0);
